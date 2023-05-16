@@ -219,15 +219,15 @@ func main() {
 	flag.BoolVar(&debug, "debug", false, "Enable debug logs")
 	flag.StringVar(&apiEndpoint, "api-endpoint", defaultAPIEndpoint, "ProtonMail API endpoint")
 
-	smtpHost := flag.String("smtp-host", "127.0.0.1", "Allowed SMTP email hostname on which hydroxide listens, defaults to 127.0.0.1")
+	smtpHost := flag.String("smtp-host", "0.0.0.0", "Allowed SMTP email hostname on which hydroxide listens, defaults to 127.0.0.1")
 	smtpPort := flag.String("smtp-port", "1025", "SMTP port on which hydroxide listens, defaults to 1025")
 	disableSMTP := flag.Bool("disable-smtp", false, "Disable SMTP for hydroxide serve")
 
-	imapHost := flag.String("imap-host", "127.0.0.1", "Allowed IMAP email hostname on which hydroxide listens, defaults to 127.0.0.1")
+	imapHost := flag.String("imap-host", "0.0.0.0", "Allowed IMAP email hostname on which hydroxide listens, defaults to 127.0.0.1")
 	imapPort := flag.String("imap-port", "1143", "IMAP port on which hydroxide listens, defaults to 1143")
 	disableIMAP := flag.Bool("disable-imap", false, "Disable IMAP for hydroxide serve")
 
-	carddavHost := flag.String("carddav-host", "127.0.0.1", "Allowed CardDAV email hostname on which hydroxide listens, defaults to 127.0.0.1")
+	carddavHost := flag.String("carddav-host", "0.0.0.0", "Allowed CardDAV email hostname on which hydroxide listens, defaults to 127.0.0.1")
 	carddavPort := flag.String("carddav-port", "8080", "CardDAV port on which hydroxide listens, defaults to 8080")
 	disableCardDAV := flag.Bool("disable-carddav", false, "Disable CardDAV for hydroxide serve")
 
